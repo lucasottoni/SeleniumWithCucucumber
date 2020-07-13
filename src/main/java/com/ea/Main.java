@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.Console;
 import org.openqa.selenium.devtools.DevTools;
