@@ -10,6 +10,8 @@ import Base.BaseUtil;
 
 
 import io.cucumber.java.*;
+
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -43,8 +45,11 @@ public class Hook extends BaseUtil{
 //        System.setProperty("webdriver.chrome.driver", "/Users/karthikkk/ChromeDriver/chromedriver");
 //        base.Driver = new ChromeDriver();
 
-        System.setProperty("webdriver.chrome.driver", "C:/driver/Web/chromedriver.exe");
-        base.Driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        base.Driver = new ChromeDriver(chromeOptions);
     }
 
 
