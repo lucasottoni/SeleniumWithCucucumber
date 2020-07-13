@@ -30,8 +30,11 @@ public class Main {
     public static void main(String[] args) {
 
         //Selenium 4
-        System.setProperty("webdriver.chrome.driver", "/Users/karthikkk/ChromeDriver/chromedriver");
-        var chromeDriver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        var chromeDriver = new ChromeDriver(chromeOptions);
 
         var chromeDevTools = chromeDriver.getDevTools();
         //Session of ChromeDevTool
